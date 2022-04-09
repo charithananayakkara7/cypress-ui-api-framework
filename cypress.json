@@ -1,0 +1,14 @@
+{
+  "nodeVersion": "system",
+  "defaultCommandTimeout": 9000,
+  "pageLoadTimeout": 90000,
+  "env": {
+    "Baseqaurl": "http://automationpractice.com"
+  },
+  "projectId": "j5z8q7",
+  "fixturesFolder": "cypress/test-data",
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
+}
