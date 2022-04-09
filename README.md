@@ -1,10 +1,10 @@
 # cypress-ui-framework
 
-PreCondition 
+---PreCondition---
 
 Requires Node.js v12+ to run.
 
-Installation guideline
+---Installation guideline---
 
 Install the dependencies and devDependencies and start the server.
 
