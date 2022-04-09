@@ -1,6 +1,6 @@
 # cypress-ui-framework
 
-Installation
+Installation guideline
 
 Requires Node.js v12.8+ to run.
 
