@@ -6,7 +6,9 @@ Requires Node.js v12+ to run.
 
 ---Installation guideline---
 
-Install the dependencies and devDependencies and start the server.
+First Install the dependencies and dev dependencies and later start the server.
+
+Steps to follow
 
 1) cd cypress-ui-api-framework
 
