@@ -1,8 +1,10 @@
 # cypress-ui-framework
 
-Installation guideline
+PreCondition 
 
-Requires Node.js v12.8+ to run.
+Requires Node.js v12+ to run.
+
+Installation guideline
 
 Install the dependencies and devDependencies and start the server.
 
@@ -11,5 +13,8 @@ Install the dependencies and devDependencies and start the server.
 2) npm install 
 
 3) npm run chrometest
+
+
+More details -: https://docs.cypress.io/
 
 
