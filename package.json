@@ -1,14 +1,14 @@
 {
   "name": "cypressuiapi",
   "version": "1.0.0",
-  "description": "Cypress ui api automation framework",
+  "description": "cypress ui api automation framework",
   "main": "index.js",
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "testwithhead": "npm run test -- --headed",
     "chrometest": "npm run test --browser chrome",
-    "edgetest": "node_modules\\.bin\\cypress run --browser edge",
     "firfoxtest": "node_modules\\.bin\\cypress run --browser firefox",
+    "edgetest": "node_modules\\.bin\\cypress run --browser edge",
     "onlinedashboard": "npm run test -- --record --key 99e5cf06-c372-482a-ac0a-0e7f55f8d2a1 --reporter mochawesome",
     "Regression": "npm run test -- --reporter mochawesome --spec \"cypress/integration/Regression/*\"",
     "Sanity": "npm run test -- --spec  \"cypress/integration/Sanity/*\"",
