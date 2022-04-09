@@ -1,7 +1,7 @@
 {
   "nodeVersion": "system",
-  "defaultCommandTimeout": 9000,
-  "pageLoadTimeout": 90000,
+  "defaultCommandTimeout": 8000,
+  "pageLoadTimeout": 80000,
   "env": {
     "Baseqaurl": "http://automationpractice.com"
   },
