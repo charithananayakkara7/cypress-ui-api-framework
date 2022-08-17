@@ -10,7 +10,7 @@ headers:{
 
 },
 body:{
-    "email":"charithananayakkara7@gmail.com","password":"Test1234%"
+    "email":"","password":""
     
 }   
         }).then((res)=>{
