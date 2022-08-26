@@ -3,8 +3,10 @@
   "defaultCommandTimeout": 8000,
   "pageLoadTimeout": 80000,
   "env": {
-    "Baseqaurl": "http://automationpractice.com"
+    "Baseqaurl": "http://automationpractice.com",
+    "Baseqaurl1":"https://service.example.com"
   },
+  
   "projectId": "j5z8q7",
   "fixturesFolder": "cypress/test-data",
   "retries": {

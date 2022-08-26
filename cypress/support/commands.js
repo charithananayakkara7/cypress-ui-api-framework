@@ -9,3 +9,9 @@ Cypress.Commands.add('Login', (email, password) => {
 Cypress.Commands.add('Logout', () => {
     cy.get(".logout").click()
 })
+
+//exception handeling
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from failing the test
+    return false
+  })
