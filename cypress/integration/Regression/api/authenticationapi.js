@@ -1,6 +1,7 @@
 ///reference types="Cypress"/>
-var token 
-describe('User login functionality verification', () => {
+describe('User login functionality verification and changing profile', () => {
+  let token
+  var token1  = "d4ec336bddecfc419331e2ebb36a90b35f4df8a6fe2d912f115b7c50ac96eafe"
 
     beforeEach(function () {
         // root-level hook
@@ -12,6 +13,7 @@ describe('User login functionality verification', () => {
         })
       })
     it('Get the authentication token', function () {
+     
        cy.request({
 method:'POST',
 url:Cypress.env('Baseqaurl1')+"/api/v1/user/auth",
@@ -31,7 +33,7 @@ expect(res.body).to.have.property('msg', null)
 expect(res.body.data).to.have.property('responseUser')
 expect(res.body.data.responseUser).to.have.property('type',1)
 expect(res.body.data).to.have.property('token')
-token =res.body.data.token
+ token =res.body.data.token
 cy.log(JSON.stringify(token))
 
         })
@@ -61,9 +63,7 @@ expect(res.status).to.eq(200)
 expect(res.body.data).to.have.property('first_name',this.data.first_name)
 expect(res.body).to.have.property('status', true)
 
-     })
-
+   })
 })
 
 })
-

@@ -1,5 +1,5 @@
-import LoginPage from '../../support/Pages/LoginPage'
-import HomePage from '../../support/Pages/HomePage'
+import LoginPage from '../../../support/Pages/LoginPage'
+import HomePage from '../../../support/Pages/HomePage'
 describe('User login functionality verification', () => {
   //Creating login page object
   const Loginpage = new LoginPage()
