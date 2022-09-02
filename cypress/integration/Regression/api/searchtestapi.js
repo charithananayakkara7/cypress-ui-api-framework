@@ -53,7 +53,7 @@ describe('User Search flow', () => {
             //expect(res.body[i]).to.have.property('id',res.body[i].id)  
             }
             cy.log(JSON.stringify(index0))
-            expect(index0).to.eq(2527)
+            expect(index0).to.eq(2800)
             expect(length).to.eq(10)
 
        })
