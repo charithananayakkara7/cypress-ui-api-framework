@@ -5,7 +5,8 @@
   "env": {
     "Baseqaurl": "http://automationpractice.com",
     "Baseqaurl1":"https://service.mysite.com",
-    "Baseqaurl2":"https://gorest.co.in"
+    "Baseqaurl2":"https://gorest.co.in",
+    "Baseqaurl3":"https://example.com"
   },
   
   "projectId": "j5z8q7",
