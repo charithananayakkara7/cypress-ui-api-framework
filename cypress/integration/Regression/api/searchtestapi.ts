@@ -69,7 +69,6 @@ describe('User Search flow', () => {
           //getting the gender equal to male count
           for (let i = 0; i < res.body.length; i++) {
             if (res.body[i].gender == 'male') {
-              cy.log(count)
               malecount = malecount + count
             }
             var index0 = res.body[0].id
@@ -78,7 +77,6 @@ describe('User Search flow', () => {
           }
           //logging details
           cy.log(JSON.stringify(index0))
-          cy.log(malecount)
           cy.log(randomemail)
           cy.log("this-is-userid" + userid)
 
