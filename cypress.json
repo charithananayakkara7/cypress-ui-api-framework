@@ -4,7 +4,7 @@
   "pageLoadTimeout": 80000,
   "env": {
     "Baseqaurl": "http://automationpractice.com",
-    "Baseqaurl1":"https://service.mysite.com",
+    "Baseqaurl1":"https://service.vocalizemysite.com",
     "Baseqaurl2":"https://gorest.co.in",
     "Baseqaurl3":"https://rahulshettyacademy.com",
     "Baseqaurl4":"api.openweathermap.org",
