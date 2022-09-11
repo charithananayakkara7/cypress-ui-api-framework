@@ -54,8 +54,6 @@ describe('User login functionality verification', () => {
 
     })
 
-    cy.config('defaultCommandTimeout', 7000)
-
   })
 
   it('Navigating to the home page', function () {

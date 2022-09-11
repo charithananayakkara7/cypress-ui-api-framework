@@ -1,28 +1,35 @@
 class LoginPage {
 
+    private footer: string = "._blank";
+    private email: string = "input[id='email']";
+    private password: string = "input[id='passwd']";
+    private signin: string = ".icon-lock";
+    private signinlink: string = ".login";
+    private h1: string = "h1";
+
     GetFooterelement() {
-        return cy.get("._blank")
+        return cy.get(this.footer)
     }
 
     Getemailboxelement() {
-        return cy.get("input[id='email']")
+        return cy.get(this.email)
     }
 
     Getpasswordboxelement() {
-        return cy.get("input[id='passwd']")
+        return cy.get(this.password)
     }
 
     GetSiginbuttonelement() {
-        return cy.get(".icon-lock")
+        return cy.get(this.signin)
     }
 
     GetSiginlink() {
-        return cy.get(".login")
+        return cy.get(this.signinlink)
     }
 
 
     GetH1() {
-        return cy.get("h1")
+        return cy.get(this.h1)
 
     }
 

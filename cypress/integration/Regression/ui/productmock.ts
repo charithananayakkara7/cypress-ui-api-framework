@@ -34,9 +34,9 @@ describe('mocking product details list', () => {
      //Redirecting to the site
      cy.visit(Cypress.env('Baseqaurl3') + "/seleniumPractise/#/")
      
-    //waiting till products mock call can use both sould and then
-    //umcomment for use should
-    cy.wait('@bookproducts').should(({request,response})=>{
+    //waiting till products mock call can use both should and then
+    //umcommened for use then command
+    cy.wait('@bookproducts').should(({response})=>{
       //cy.wait('@bookproducts').then(({request,response})=>{
 cy.get('div > .product-image').should('have.length',response.body.length)
 

@@ -21,7 +21,6 @@ describe('User login functionality verification', () => {
   // the test callback is in "function () { ... }" form
   it('Navigating to the Log in page', function () {
     cy.visit(Cypress.env('Baseqaurl') + "/index.php")
-    cy.config('defaultCommandTimeout', 7000)
 })
 it('Validate the HomePage ui elements', function () {
   Loginpage.GetH1().contains(this.data.H1)
