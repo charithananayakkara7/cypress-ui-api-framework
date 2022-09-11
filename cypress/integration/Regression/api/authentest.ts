@@ -1,4 +1,4 @@
-import { token1 } from "./authenticationapi.js";
+
 ///reference types="Cypress"/>
 describe('Authentication token from other file test', () => {
 
@@ -13,7 +13,7 @@ describe('Authentication token from other file test', () => {
   })
   it('Get the authentication token from authentication token file', function () {
     //cy.log(JSON.stringify(token))
-    cy.log(JSON.stringify("token from previous it" + token1))
+    //cy.log(JSON.stringify("token from previous it" + token1))
 
 
   })
