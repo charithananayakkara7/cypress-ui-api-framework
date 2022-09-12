@@ -1,4 +1,4 @@
-# cypress-ui-framework
+# cypress-ui-api-framework
 
 **PreCondition**
 
