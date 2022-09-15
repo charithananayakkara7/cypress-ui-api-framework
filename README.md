@@ -2,7 +2,7 @@
 
 **PreCondition**
 
-Should have Docker setup on your local machine
+Should have Windows Docker setup on your local machine
 
 Requires Node.js v12+ to run.
 
