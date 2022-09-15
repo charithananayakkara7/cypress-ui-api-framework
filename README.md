@@ -22,7 +22,7 @@ Steps to follow
 
 **Create Docker Image**
 
-1) Run  "docker build -t <any new docker  image name> ."
+1) Run docker build -t <any new docker  image name> .
  
  eg -: docker build -t cytest-dockerimage9 .
 
