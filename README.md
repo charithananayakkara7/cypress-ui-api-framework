@@ -1,6 +1,7 @@
 # cypress-ui-api-framework
 
 **PreCondition**
+
 Should have Docker setup on your local machine
 
 Requires Node.js v12+ to run.
@@ -11,7 +12,7 @@ First install the dependencies and dev dependencies, and later start the server.
 
 Steps to follow
 
-1) clone the repository
+1) Clone the repository
 
 2) cd cypress-ui-api-framework
 
