@@ -36,8 +36,8 @@ Steps to follow
  
 1) Run "docker-compose  run <Any Service name>"
 
- eg -: docker-compose  run e2e-chrome   
-       docker-compose  run e2e-electron
+ eg 1 -: docker-compose  run e2e-chrome   
+ eg 2 -: docker-compose  run e2e-electron
 
 **More details** -: https://docs.cypress.io/
 
