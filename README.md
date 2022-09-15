@@ -25,8 +25,14 @@ Steps to follow
 1) Run docker build -t <any new docker  image name> .
  
  eg -: docker build -t cytest-dockerimage9 .
+ 
+ **Cross browser testing with parallelly with docker**
+ 
+1) Run "docker-compose  run up"
 
-**Test with parallelly with docker**
+ eg -: docker-compose  run up   
+
+**Test with parallelly with chrome/firefox/electron**
  
 1) Run "docker-compose  run <Any Service name>"
 
