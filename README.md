@@ -20,12 +20,16 @@ Steps to follow
 4) npm run chrometest
 
 **Create Docker Image**
+
 1) Run  "docker build -t <any new docker  image name> ."
+ 
  eg -: docker build -t cytest-dockerimage9 .
 
 **Test with parallelly with docker**
+ 
 1) Run "docker-compose  run <Any Service name>"
-eg -: docker-compose  run e2e-chrome   
+
+ eg -: docker-compose  run e2e-chrome   
 
 
 **More details** -: https://docs.cypress.io/
