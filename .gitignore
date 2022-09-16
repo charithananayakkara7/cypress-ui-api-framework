@@ -28,3 +28,4 @@ package-lock.json/
 mochawesome-report/
 screenshots/
 videos/
+cypress/reports/
