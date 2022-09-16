@@ -42,3 +42,9 @@ Steps to follow
 **More details** -: https://docs.cypress.io/
 
 
+Need developement
+1) Docker integration with jenkins for parallell test  (with parallell test as a arugument for comman line interface)
+2) Need development work related to volumes
+3) Docker Hub and jenkins related stuff
+
+
