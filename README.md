@@ -43,8 +43,11 @@ Steps to follow
 
 
 Need developement
-1) Docker integration with jenkins for parallell test  (with parallell test as a arugument for comman line interface)
+1) Docker integration with jenkins for parallell test  (with parallell test as a arugument for command line interface)
 2) Need development work related to volumes
 3) Docker Hub and jenkins related stuff
+4) Add firefox for parallell test
+5) Move cypress-mocha test report file created in docker workspace to volumes
+6) Move cypress test folder path  to docker file so no need to worry about create new image once adding new test
 
 
