@@ -2,24 +2,24 @@ version: "3"
 services:
 # this container will run Cypress test using Chrome browser
   service-chrome:
-    image: "cytest-dockerimage21"
-    command: "cypress-dashboard-chrome"
+    image: "cytest-dockerimage22"
+    command: "cypress-dashboard-chrome-mocha-report"
     volumes:
       - ./cypress/videos/Regression/api:/cypress-docker/cypress-docker-reports
       - ./cypress/videos/Regression/ui:/cypress-docker/cypress-docker-videos
       
   # this container will run Cypress test using built-in Electron browser
   service-electron:
-    image: "cytest-dockerimage21"
-    command: "cypress-dashboard-electron"
+    image: "cytest-dockerimage22"
+    command: "cypress-dashboard-electron-mocha-report"
     volumes:
       - ./cypress/videos/Regression/api:/cypress-docker-videos
       - ./cypress/videos/Regression/api:/cypress-docker-reports
 
       # this container will run Cypress test using built-in Edge browser
   service-edge:
-    image: "cytest-dockerimage21"
-    command: "cypress-dashboard-edge"
+    image: "cytest-dockerimage22"
+    command: "cypress-dashboard-edge-mocha-report"
     volumes:
       - ./cypress/videos/Regression/api:/cypress-docker-videos
       - ./cypress/videos/Regression/api:/cypress-docker-reports
