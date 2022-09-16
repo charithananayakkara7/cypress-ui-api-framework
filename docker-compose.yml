@@ -1,16 +1,25 @@
 version: "3"
 services:
 # this container will run Cypress test using Chrome browser
-  e2e-chrome:
-    image: "cytest-dockerimage10"
-    command: "chrome:test"
+  service-chrome:
+    image: "cytest-dockerimage21"
+    command: "cypress-dashboard-chrome"
     volumes:
-      - ./cypress/videos:/cypress-docker/cypress/videos
-      - ./cypress/reports:/cypress-docker/cypress/reports
+      - ./cypress/videos/Regression/api:/cypress-docker/cypress-docker-reports
+      - ./cypress/videos/Regression/ui:/cypress-docker/cypress-docker-videos
+      
   # this container will run Cypress test using built-in Electron browser
-  e2e-electron:
-    image: "cytest-dockerimage10"
-    command: "test"
+  service-electron:
+    image: "cytest-dockerimage21"
+    command: "cypress-dashboard-electron"
     volumes:
-      - ./cypress/videos:/cypress-docker/cypress/videos
-      - ./cypress/reports:/cypress-docker/cypress/reports
+      - ./cypress/videos/Regression/api:/cypress-docker-videos
+      - ./cypress/videos/Regression/api:/cypress-docker-reports
+
+      # this container will run Cypress test using built-in Edge browser
+  service-edge:
+    image: "cytest-dockerimage21"
+    command: "cypress-dashboard-edge"
+    volumes:
+      - ./cypress/videos/Regression/api:/cypress-docker-videos
+      - ./cypress/videos/Regression/api:/cypress-docker-reports
