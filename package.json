@@ -4,7 +4,7 @@
   "description": "cypress ui api automation framework",
   "main": "index.ts",
   "scripts": {
-    "test": "node_modules\\.bin\\cypress run",
+    "test": ".//node_modules//.bin//cypress run",
     "testwithhead": "npm run test -- --headed",
     "chrome-test": "node_modules\\.bin\\cypress run --browser chrome",
     "chrome-headless-test": "node_modules\\.bin\\cypress run --browser chrome --headless",
@@ -27,13 +27,13 @@
     "mochawesomewithdashboardreportchrome": "node_modules\\.bin\\cypress run  --record --key 99e5cf06-c372-482a-ac0a-0e7f55f8d2a1 -- --browser chrome",
     "Regression": "npm run test -- --reporter mochawesome --spec \"cypress/integration/Regression/*\"",
     "Sanity": "npm run test -- --spec  \"cypress/integration/Sanity/*\"",
-    "Regression-Suite": "node_modules\\.bin\\cypress run --spec  \"cypress/integration/Regression/*\""
+    "Regression-Suite": "npm run test --spec  \"cypress/integration/Regression/api/*\""
   },
   "author": "Charitha Nanayakkara",
   "license": "ISC",
   "devDependencies": {
     "axe-core": "^4.4.1",
-    "cypress": "^9.5.2",
+    "cypress": "^9.7.0",
     "cypress-axe": "^0.14.0",
     "cypress-mochawesome-reporter": "^3.2.2",
     "mocha": "^9.2.1",
