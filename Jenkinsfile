@@ -33,7 +33,7 @@ pipeline {
           }
 
           if (params.BROWSER) {
-            testCommand += ' --browser environment=' + params.BROWSER
+            testCommand += ' --browser' + params.BROWSER
           }
 
           sh testCommand
