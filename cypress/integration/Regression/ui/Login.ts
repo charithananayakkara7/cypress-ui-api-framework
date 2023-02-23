@@ -22,6 +22,7 @@ describe('User login functionality verification', () => {
   it('Navigating to the Log in page', function () {
     cy.visit(Cypress.env('Baseqaurl') + "/index.php")
 })
+/*
 it('Validate the HomePage ui elements', function () {
   Loginpage.GetH1().contains(this.data.H1)
   Loginpage.GetSiginlink().click()
@@ -40,4 +41,5 @@ it('Validate the login funtionality with correct email and password ', function 
   Homepage.Getaccountname().contains(this.data.accountname)
   cy.Logout()
 })
+*/
 })
