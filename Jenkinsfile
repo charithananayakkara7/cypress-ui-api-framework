@@ -22,7 +22,7 @@ pipeline {
     stage('Run tests') {
       steps {
         script {
-          def testCommand = 'npm run test'
+          def testCommand = 'node_modules/.bin/cypress run'
 
           if (params.TEST_SUITE) {
             testCommand += ' --spec "cypress/integration/' + params.TEST_SUITE + '/*"'
