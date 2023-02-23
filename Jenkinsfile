@@ -3,7 +3,7 @@ pipeline {
 
   parameters {
     string(name: 'TEST_SUITE', defaultValue: 'Sanity', description: 'Which test suite to run')
-    string(name: 'ENVIRONMENT', defaultValue: 'local', description: 'Which environment to run tests against')
+    //string(name: 'ENVIRONMENT', defaultValue: 'local', description: 'Which environment to run tests against')
   }
 
   stages {
