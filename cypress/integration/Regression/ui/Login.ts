@@ -22,7 +22,7 @@ describe('User login functionality verification', () => {
   // the test callback is in "function () { ... }" form
   it('Navigating to the Log in page', function () {
     cy.visit(Cypress.env('Baseqaurl') + "/index.php")
-    console.debug("here is the email"+state.testContext.emailReg)
+    //console.debug("here is the email"+state.testContext.emailReg)
 })
 /*
 it('Validate the HomePage ui elements', function () {

@@ -5,6 +5,8 @@ describe('User registeration flow', () => {
   let token  = "d4ec336bddecfc419331e2ebb36a90b35f4df8a6fe2d912f115b7c50ac96eafe"
   let pattern= "" 
   let randomtext = ""
+  let randomemail = ""
+
     beforeEach(function () {
         // root-level hook
         // "this" points at the test context object
@@ -14,11 +16,15 @@ describe('User registeration flow', () => {
         
         })
       })
+
+      for(var i=0;i<10;i++){
+        pattern = "Nequeporroquisquamestquidoloremipsumquiadolorsitametconsectetuadipiscivelit2"
+        randomtext += pattern.charAt(Math.floor(Math.random()* pattern.length))
+        state.testContext.emailReg = randomtext+'@gmail.com';
+        randomemail =state.testContext.emailReg;
+      }
+
     it('Registering a user with new email', function () {
-      pattern = "Nequeporroquisquamestquidoloremipsumquiadolorsitametconsectetuadipiscivelit2"
-      for(var i=0;i<10;i++)
-      randomtext += pattern.charAt(Math.floor(Math.random()* pattern.length))
-      state.testContext.emailReg = randomtext+'@gmail.com',
        cy.request({
 method:'POST',
 url:Cypress.env('Baseqaurl2')+"/public/v2/users",
@@ -26,7 +32,7 @@ headers:{
   "Authorization":"Bearer "+token
 },
 body:{
-  "name":this.data.name,"email":state.testContext.emailReg,"gender":this.data.gender,"status":this.data.status
+  "name":this.data.name,"email":randomemail,"gender":this.data.gender,"status":this.data.status
     
 }   
         }).then((res)=>{
@@ -34,7 +40,7 @@ body:{
 expect(res.status).to.eq(201)
 expect(res.body).to.have.property('name', this.data.name)
 expect(res.body).to.have.property('gender',this.data.gender)
-expect(res.body).to.have.property('email',state.testContext.emailReg)
+expect(res.body).to.have.property('email',randomemail)
       
         
 }).then((res)=>{
@@ -54,7 +60,7 @@ expect(res.body).to.have.property('email',state.testContext.emailReg)
               expect(res.body).to.have.property('name', this.data.name)
               expect(res.body).to.have.property('gender',this.data.gender)
               expect(res.body).to.have.property('status',this.data.status)
-              expect(res.body).to.have.property('email',state.testContext.emailReg)
+              expect(res.body).to.have.property('email',randomemail)
             })
      })
 
