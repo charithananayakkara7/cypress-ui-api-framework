@@ -20,8 +20,8 @@ describe('User registeration flow', () => {
       for(var i=0;i<10;i++){
         pattern = "Nequeporroquisquamestquidoloremipsumquiadolorsitametconsectetuadipiscivelit2"
         randomtext += pattern.charAt(Math.floor(Math.random()* pattern.length))
-        state.testContext.emailReg = randomtext+'@gmail.com';
-        randomemail =state.testContext.emailReg;
+        randomemail = randomtext+'@gmail.com';
+        //randomemail =state.testContext.emailReg;
       }
 
     it('Registering a user with new email', function () {
