@@ -1,9 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'cypress/browsers:node14.17.0-chrome91-ff89'
-      args '-u root'
-    }
+  agent any
   }
 
   parameters {
@@ -19,10 +15,25 @@ pipeline {
       }
     }
 
-    stage('Start docker test') {
+    stage('Start test') {
       steps {
-        sh 'make test'
-      }
+        script {
+          def testCommand = 'npm run test'
+
+          if (params.TEST_SUITE) {
+            testCommand += ' --spec "cypress/integration/' + params.TEST_SUITE + '/*"'
+          }
+
+          if (params.ENVIRONMENT) {
+            testCommand += ' --env environment=' + params.ENVIRONMENT
+          }
+
+          if (params.BROWSER) {
+            testCommand += ' --browser' + params.BROWSER
+          }
+
+          sh testCommand
+        }
     }
   }
 }
