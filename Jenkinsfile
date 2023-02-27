@@ -5,9 +5,13 @@ pipeline {
     string(name: 'ENVIRONMENT', defaultValue: 'api.openweathermap.org', description: 'Which environment to run tests against')
     string(name: 'BROWSER', defaultValue: 'chrome', description: 'Which browser to run tests against')
   }
+ options {
 
+ansiColor('xterm')
+
+ }
   stages {
-    stage('Checkout') {
+    stage('Deploying') {
       steps {
         checkout scm
       }
@@ -31,6 +35,14 @@ pipeline {
           }
 
           sh testCommand
+        }
+
+
+        post{
+
+          always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+          }
         }
     }
   }
