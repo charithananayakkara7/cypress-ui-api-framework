@@ -1,7 +1,5 @@
 pipeline {
   agent any
-  }
-
   parameters {
     string(name: 'TEST_SUITE', defaultValue: 'Regression', description: 'Which test suite to run')
     string(name: 'ENVIRONMENT', defaultValue: 'api.openweathermap.org', description: 'Which environment to run tests against')
@@ -36,4 +34,5 @@ pipeline {
         }
     }
   }
+   }
 }
