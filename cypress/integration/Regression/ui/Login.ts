@@ -1,5 +1,6 @@
 import LoginPage from '../../../support/Pages/LoginPage'
 import HomePage from '../../../support/Pages/HomePage'
+import { state } from '../../../const/state'
 describe('User login functionality verification', () => {
   //Creating login page object
   const Loginpage = new LoginPage()
@@ -21,6 +22,7 @@ describe('User login functionality verification', () => {
   // the test callback is in "function () { ... }" form
   it('Navigating to the Log in page', function () {
     cy.visit(Cypress.env('Baseqaurl') + "/index.php")
+    console.debug("here is the email"+state.testContext.emailReg)
 })
 /*
 it('Validate the HomePage ui elements', function () {
