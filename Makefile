@@ -5,5 +5,5 @@ test:
 	  -e TEST_SUITE="${TEST_SUITE}" \
 	  -e ENVIRONMENT="${ENVIRONMENT}" \
 	  -e BROWSER="${BROWSER}" \
-	  cypress/included:8.2.0 \
+	  cypress/browsers:node14.17.0-chrome91-ff89 \
 	  npm run test -- --spec "cypress/integration/${TEST_SUITE}/*"
