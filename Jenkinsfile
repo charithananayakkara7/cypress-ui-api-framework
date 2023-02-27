@@ -1,9 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'cypress/browsers:node14.16.0-chrome90-ff88'
+      args '-u root'
+    }
+  }
 
   parameters {
     string(name: 'TEST_SUITE', defaultValue: 'Regression', description: 'Which test suite to run')
-    string(name: 'ENVIRONMENT', defaultValue: 'qa', description: 'Which environment to run tests against')
+    string(name: 'ENVIRONMENT', defaultValue: 'api.openweathermap.org', description: 'Which environment to run tests against')
     string(name: 'BROWSER', defaultValue: 'chrome', description: 'Which browser to run tests against')
   }
 
@@ -14,13 +19,7 @@ pipeline {
       }
     }
 
-    stage('Install dependencies') {
-      steps {
-        sh 'npm install'
-      }
-    }
-
-    stage('Make') {
+    stage('Start docker test') {
       steps {
         sh 'make test'
       }
