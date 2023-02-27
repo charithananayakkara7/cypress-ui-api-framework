@@ -5,11 +5,9 @@ pipeline {
     string(name: 'ENVIRONMENT', defaultValue: 'api.openweathermap.org', description: 'Which environment to run tests against')
     string(name: 'BROWSER', defaultValue: 'chrome', description: 'Which browser to run tests against')
   }
- options {
-
-ansiColor('xterm')
-
- }
+  options {
+    ansiColor('xterm')
+  }
   stages {
     stage('Deploying') {
       steps {
@@ -36,16 +34,13 @@ ansiColor('xterm')
 
           sh testCommand
         }
+      }
+    }
 
+    stage('Publish HTML Report') {
+      steps {
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+      }
     }
   }
-
-  	stage("Save HTML reports") {
-        post{
-          always{
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
-          }
-        }
-				}
-   }
 }
