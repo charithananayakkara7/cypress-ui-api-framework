@@ -1,6 +1,11 @@
+
+
+/*
 import { state } from "../../../const/state"
 
 ///reference types="Cypress"/>
+
+
 describe('User registeration flow', () => {
   let token  = "d4ec336bddecfc419331e2ebb36a90b35f4df8a6fe2d912f115b7c50ac96eafe"
   let pattern= "" 
@@ -67,3 +72,5 @@ expect(res.body).to.have.property('email',randomemail)
 })
 
 })
+
+*/

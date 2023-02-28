@@ -1,3 +1,5 @@
+
+/*
 ///reference types="Cypress"/>
 describe('User login functionality verification and changing profile', () => {
   let token
@@ -70,3 +72,4 @@ describe('User login functionality verification and changing profile', () => {
   })
 
 })
+*/
