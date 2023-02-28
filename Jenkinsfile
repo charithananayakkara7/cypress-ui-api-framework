@@ -38,7 +38,9 @@ pipeline {
     }
 
     stage('Publish HTML Report') {
+
       steps {
+        sh 'mkdir -p /var/lib/jenkins/workspace/e2e-test-automation/cypress/report'
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
       }
     }
