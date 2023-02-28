@@ -36,13 +36,12 @@ pipeline {
         }
       }
     }
-
-    post{
-always{
-  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
-
+  	stage("Save HTML reports") {
+        post{
+          always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+          }
+        }
+				}
 }
-
-    }
-  }
 }
